@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/swiper.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -29,12 +32,141 @@
         </header>
     </div>
 
+    <!-- 내용 -->
     <div>
-        난내용
+        <!-- Swiper -->
+        <div class="slider_wrap">
+            <div class="swiper-container main_slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="images/slider01.jpg"></div>
+                    <div class="swiper-slide"><img src="images/slider02.jpg"></div>
+                    <div class="swiper-slide"><img src="images/slider01.jpg"></div>
+                    <div class="swiper-slide"><img src="images/slider02.jpg"></div>
+                    <div class="swiper-slide"><img src="images/slider01.jpg"></div>
+                    <div class="swiper-slide"><img src="images/slider02.jpg"></div>
+                </div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+            <!-- Swiper JS -->
+            <script src="js/swiper.min.js"></script>
+            <!-- Initialize Swiper -->
+            <script>
+                var swiper = new Swiper('.main_slider', {
+                cssMode: true,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                pagination: {
+                    el: '.swiper-pagination'
+                },
+                mousewheel: true,
+                keyboard: true,
+                });
+            </script>
+        </div>
+
+        <!-- 아이콘 메뉴 리스트 -->
+        <div class="icon_menu_wrap">
+            <ul>
+                <li><a href="" class="icon_menu01">인기수업</a></li>
+                <li><a href="" class="icon_menu02">디자인</a></li>
+                <li><a href="" class="icon_menu03">실무역량</a></li>
+                <li><a href="" class="icon_menu04">뷰티</a></li>
+                <li><a href="" class="icon_menu05">영상</a></li>
+                <li><a href="" class="icon_menu06">외국어</a></li>
+            </ul>
+        </div>
+
+        <!--이번주 시작-->
+        <div class="second_slider_container">
+            <h3>이번주 시작</h3>
+            <!-- Swiper -->
+            <div class="swiper-container week_slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#n">
+                            <div class="thumbs_nail">
+                                <img src="images/thumbs_1.png">
+                            </div>
+                            <h5>[원데이]하루만에 쉽고 배우는 K-POP</h5>
+                            <P class="desc">02월08일 시작.건대</P>
+                            <span><strong>912명참여</strong><i class="xi-star-o"></i> 5.0</span>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#n">
+                            <div class="thumbs_nail">
+                                <img src="images/thumbs_1.png">
+                            </div>
+                            <h5>[원데이]하루만에 쉽고 배우는 K-POP</h5>
+                            <P class="desc">02월08일 시작.건대</P>
+                            <span><strong>912명참여</strong><i class="xi-star-o"></i> 5.0</span>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#n">
+                            <div class="thumbs_nail">
+                                <img src="images/thumbs_1.png">
+                            </div>
+                            <h5>[원데이]하루만에 쉽고 배우는 K-POP</h5>
+                            <P class="desc">02월08일 시작.건대</P>
+                            <span><strong>912명참여</strong><i class="xi-star-o"></i> 5.0</span>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#n">
+                            <div class="thumbs_nail">
+                                <img src="images/thumbs_1.png">
+                            </div>
+                            <h5>[원데이]하루만에 쉽고 배우는 K-POP</h5>
+                            <P class="desc">02월08일 시작.건대</P>
+                            <span><strong>912명참여</strong><i class="xi-star-o"></i> 5.0</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Add Arrows -->
+            <div class="slider_btn_wrap">
+                <div class="week_btn_common week_button_prev"><i class="xi-angle-left"></i></div>
+                <div class="week_btn_common week_button_next"><i class="xi-angle-right"></i></div>
+            </div>
+
+            <!-- Initialize Swiper -->
+            <script>
+                var swiper = new Swiper('.week_slider', {
+                slidesPerView: 3,
+                spaceBetween: 30,
+                slidesPerGroup: 1,
+                loop: true,
+                loopFillGroupWithBlank: true,
+                navigation: {
+                    nextEl: '.week_button_next',
+                    prevEl: '.week_button_prev',
+                },
+                });
+            </script>
+        </div>
     </div>
 
-    <footer>
-        난푸터
-    </footer>
+
+     <!-- 풋터 -->
+    <div class="footer_wrap">
+        <footer>
+            <div class="footer_container">
+                <ul>
+                    <li>COMPANY</li>
+                    <li>POLICIES</li>
+                    <li>SUPPORT</li>
+                    <li>기업교육</li>
+                    <li>TALING CENTER</li>
+                </ul>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
